@@ -1,8 +1,9 @@
 import React from 'react';
+import Breath from './Breath';
 
 const App = () => {
   return (
-    <h1>Hello World</h1>
+    <Breath />
   );
 };
 
