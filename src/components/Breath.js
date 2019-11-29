@@ -8,18 +8,16 @@ const Breath = () => {
   useEffect(() => {
     setTimeout(() => {
       if(index >= imageArr.length - 1) {
-        console.log('stop?');
         return;
       }
       setIndex(index + 1);
-      console.log('is working?');
     }, 1000);
   }, [index]);
 
 
-
   return (
     <section>
+      <h1>{index + 1}</h1>
       <img src={imageArr[index]} />
     </section>
   );
