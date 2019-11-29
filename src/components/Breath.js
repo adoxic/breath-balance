@@ -1,18 +1,22 @@
 import React, { useState, useEffect } from 'react';
-const breath1 = '../images/breath1.png';
-const breath2 = '../images/breath2.png';
-const breath3 = '../images/breath3.png';
-const breath4 = '../images/breath4.png';
+const imageArr = [];
+imageArr.push('../images/breath1.png', '../images/breath2.png', '../images/breath3.png', '../images/breath4.png');
 
 const Breath = () => {
-  const [breath, setBreath] = useState(); 
-  useEffect(() => {
-    setBreath(breath1);
-  }, [breath]);
+  const [index, setIndex] = useState(0); 
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIndex(index + 1);
+  //     if(index > imageArr.length) {
+  //       setIndex(index - 1);
+  //     }
+  //     console.log('is working?');
+  //   }, 1000);
+  // }, [index]);
 
   return (
     <section>
-      <img src={breath} />
+      <img src={imageArr[index]} />
     </section>
   );
 };
