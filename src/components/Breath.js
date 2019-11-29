@@ -4,9 +4,10 @@ imageArr.push('../images/breath1.png', '../images/breath2.png', '../images/breat
 
 const Breath = () => {
   const [index, setIndex] = useState(0); 
+
   useEffect(() => {
     setTimeout(() => {
-      if(index > imageArr.length) {
+      if(index >= imageArr.length - 1) {
         console.log('stop?');
         return;
       }
@@ -14,6 +15,8 @@ const Breath = () => {
       console.log('is working?');
     }, 1000);
   }, [index]);
+
+
 
   return (
     <section>
