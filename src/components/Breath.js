@@ -4,15 +4,16 @@ imageArr.push('../images/breath1.png', '../images/breath2.png', '../images/breat
 
 const Breath = () => {
   const [index, setIndex] = useState(0); 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setIndex(index + 1);
-  //     if(index > imageArr.length) {
-  //       setIndex(index - 1);
-  //     }
-  //     console.log('is working?');
-  //   }, 1000);
-  // }, [index]);
+  useEffect(() => {
+    setTimeout(() => {
+      if(index > imageArr.length) {
+        console.log('stop?');
+        return;
+      }
+      setIndex(index + 1);
+      console.log('is working?');
+    }, 1000);
+  }, [index]);
 
   return (
     <section>
