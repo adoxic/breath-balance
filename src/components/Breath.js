@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 const imageArr = [];
-imageArr.push('../images/breath1.png', '../images/breath2.png', '../images/breath3.png', '../images/breath4.png');
+imageArr.push('../images/cloud1.png', '../images/cloud2.png', '../images/cloud3.png', '../images/cloud4.png', '../images/cloud5.png', '../images/cloud6.png', '../images/cloud7.png');
 
 const Breath = () => {
   const [index, setIndex] = useState(0); 
